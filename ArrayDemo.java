@@ -4,6 +4,7 @@ public class ArrayDemo{
 		printArray (new int [4][10]);
 		countZeros2D (new int [2] [7]);
 		fill2D(new int [2] [4]);
+		fill2DCopy (new int [3] [1]);
 }        
 
 public static void printArray(int[]ary){
@@ -42,4 +43,23 @@ public static void fill2D(int[][] vals){
 System.out.println(vals[i][t] + ", ") ;}
 }
 }
+public static int[][] fill2DCopy(int[][] vals){
+//from here...   
+ int [][] pgm;
+    pgm = new int[vals.length][];
+    for( int x = 0; x < vals.length;x++){
+      pgm [x] = new int[vals[x].length];
+    }
+//to here I was helped by Moududur Rahman
+	for (int i = 0; i < vals.length; i++){
+		for (int t = 0; t < vals[i].length; t++){
+			if (vals[i][t] < 0){pgm [i][t] = 3;}
+			else{pgm [i][t] = 1;}
+		
+	}}
+return pgm;}
 }
+	
+
+
+
