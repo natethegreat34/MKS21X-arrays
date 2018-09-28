@@ -3,6 +3,7 @@ public class ArrayDemo{
 		printArray (new int [5]);
 		printArray (new int [4][10]);
 		countZeros2D (new int [2] [7]);
+		fill2D(new int [2] [4]);
 }        
 
 public static void printArray(int[]ary){
@@ -30,4 +31,15 @@ if (nums[s][d] == 0){
 a++;}
 }}
 return a;}
+
+public static void fill2D(int[][] vals){
+	for (int i = 0; i < vals.length; i++){
+		for (int t = 0; t < vals[i].length; t++){
+			if (i == t) {vals[i][t] = 3;}
+			else {
+			vals[i][t] = 1;}
+		
+System.out.println(vals[i][t] + ", ") ;}
+}
+}
 }
